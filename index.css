@@ -1,0 +1,86 @@
+/* including all the tailwind stuff into this css file */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+/* .header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    padding: 5px 10px;
+}
+
+.app-logo{
+    width: 70px;
+    height: 70px;
+}
+
+.nav-items{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > li{
+    margin-left: 10px;
+
+}
+
+.search-container{
+    margin: 20px;
+    display: flex;
+}
+
+.resto-card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resto-card{
+    width: 200px;
+    padding: 5px;
+    background-color: rgb(239, 239, 234);
+    margin: 7px;
+}
+
+.resto-card:hover{
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px #eecbcb ;
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.resto-image{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.Shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Shimmer-card{
+    width: 200px;
+    height: 400px;
+    padding: 5px;
+    background-color: rgb(239, 239, 234);
+    margin: 7px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.user-card{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 10px;
+} */
