@@ -13,7 +13,7 @@ const AppBody = () =>
       const [restrauntsListToShow, setRestrauntsList] = useState([])
       const onlineStatus = useOnlineStatus()
       const {showEverywhere, setUserContextData} = useContext(UserContext)
-
+      console.log("updated in body")
         
 
         useEffect(()=>{

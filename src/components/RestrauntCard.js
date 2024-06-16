@@ -4,7 +4,6 @@ import UserContext from "../utilities/UserContext";
 
 const RestrauntCard = ({ restrauntDetails }) => {
   const {showAnywhere} = useContext(UserContext)
-  console.log("show everywhere1",showAnywhere)
 
   return (
     <div className="resto-card w-60 bg-gray-200 p-2 rounded-lg min-h-60 hover:scale-90 transition-transform">

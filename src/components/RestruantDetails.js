@@ -33,7 +33,7 @@ const RestrauntDetails = () => {
   return (
     <div className="my-4 w-7/12 mx-auto text-center">
       <h1 className="font-bold text-2xl">
-        {restoDetails?.cards[0].card.card.text}
+        {restoDetails?.cards[0]?.card?.card?.text}
       </h1>
       { menuFilteredData.length===0? <h1 className="font-bold text-gray-300 text-2xl m-10" >No items found, please try another restraunt from <a className="text-blue-500 underline" href="/">Home screen</a> </h1> :menuFilteredData.map((ele,ind) => <MenuDetails key={ele.card.card.title} showItems={openAccordianIndex===ind} setShowItemsFromChild={()=>{setOpenAccordianIndex(openAccordianIndex===ind?-1:ind)}} menuData={ele.card.card} /> ) }
     </div>

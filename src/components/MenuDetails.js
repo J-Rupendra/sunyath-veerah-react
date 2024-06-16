@@ -5,6 +5,7 @@ const MenuDetails = ({menuData, showItems, setShowItemsFromChild}) => {
 
     // //console.log("menu data with categories",menuData);
     // const [showItems, setShowItems] = useState(false)
+    console.log("updated in menu details");
 
     return (
         <div className=" bg-gray-200 mb-4 px-4 py-2 rounded-md shadow-lg hover:translate-y-1 transition-all" >

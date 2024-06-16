@@ -8,6 +8,9 @@ import Contact from "./components/Contact";
 import ErrorPage from "./components/ErrorPage";
 import RestrauntDetails from "./components/RestruantDetails";
 import UserContext from "./utilities/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utilities/appStore";
+import Cart from "./components/Cart";
 
 
 // Dynamic import for lazy loading
@@ -19,10 +22,12 @@ const AppLayout = () =>
     const [userContextData, setUserContextData] = useState("")
     return (
     <div className="app_layout mx-2" >
+        <Provider store={appStore} >
         <UserContext.Provider value={{showAnywhere:userContextData, setUserContextData}} >
         <AppHeader/>
         <Outlet />
         </UserContext.Provider>
+        </Provider>
     </div>
 )
 }
@@ -50,6 +55,10 @@ const appRoutes = createBrowserRouter([
                 path:'/restraunt/:restoId',
                 element: <RestrauntDetails />
             },
+            {
+                path: '/cart',
+                element: <Cart />
+            }
         ],
         errorElement: <ErrorPage />
     },

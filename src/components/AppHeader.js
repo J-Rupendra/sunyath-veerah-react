@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utilities/useOnlineStatus";
 import { useContext } from "react";
 import UserContext from "../utilities/UserContext";
+import { useSelector } from "react-redux";
 
 const AppHeader = () => {
 
   const onlineStatus = useOnlineStatus()
   const {showAnywhere} = useContext(UserContext)
+  const cartItemsLength = useSelector((store)=> store.cart.items).length
+  console.log("cart items",cartItemsLength)
 
   return (
-    <div className="header bg-gray-300 my-4 shadow-lg flex justify-between">
+    <div className="header bg-gray-300 my-4 px-2 shadow-lg flex justify-between">
       <Link to={"/"} >
       <img
         className="app-logo w-12 my-2"
@@ -22,7 +25,7 @@ const AppHeader = () => {
         <li className="px-4 mx-3"> <Link to="/" > Home</Link> </li>
         <li className="px-4 mx-3"> <Link to="/about" > About</Link> </li>
         <li className="px-4 mx-3"> <Link to="/contact" > Contact</Link> </li>
-        <li className="px-4 mx-3"> <Link to="/cart" > Cart</Link> </li>
+        <li className={"px-4 mx-3"+(cartItemsLength>0?' bg-orange-400 rounded-md text-white py-1 px-2':'')} > <Link to="/cart" > Cart {cartItemsLength>0 && <span className="text-white ml-1" >{cartItemsLength}</span>} </Link> </li>
       </ul>
     </div>
   )
