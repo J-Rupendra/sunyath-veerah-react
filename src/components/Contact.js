@@ -1,6 +1,8 @@
 const Contact = () => (
     <div>
-        <h1>This is contact page</h1>
+        <h1 className="font-bold">This is contact page</h1>
+        <input placeholder="first name" />
+        <button>submit</button>
     </div>
 )
 
